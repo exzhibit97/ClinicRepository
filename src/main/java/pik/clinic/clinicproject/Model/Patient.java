@@ -98,4 +98,18 @@ public class Patient {
     public void setVisits(List<Visit> visits) {
         this.visits = visits;
     }
+
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", password='" + password + '\'' +
+                ", pesel=" + pesel +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", address='" + address + '\'' +
+                ", email='" + email + '\''+
+                '}';
+    }
 }
