@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -19,6 +20,7 @@ public class Patient {
     private String phoneNumber;
     private String address;
     private String email;
+    private LocalDate birthDate;
 
 
     @OneToMany(mappedBy = "patient")
@@ -97,5 +99,13 @@ public class Patient {
 
     public void setVisits(List<Visit> visits) {
         this.visits = visits;
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 }
